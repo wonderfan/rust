@@ -426,7 +426,7 @@ Mermaid diagram (text)
 flowchart TB
   subgraph Network
     Client[Client / Node Caller]
-    ValidatorServer[Validator gRPC Server (tonic / sui_network)]
+    ValidatorServer[Validator gRPC Server]
     ValidatorClientStub[ValidatorClient (gRPC stub) - remote]
   end
 
