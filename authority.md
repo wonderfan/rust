@@ -456,7 +456,7 @@ flowchart TB
   VS -->|traffic check/tally| TC
   VS -->|metrics| MET
   RemoteValidator <-->|gRPC| ValidatorClientStub
-  SomeModule[Components that call remote validators] -->|AuthorityAPI (NetworkAuthorityClient)| ValidatorClientStub
+  SomeModule[Components that call remote validators] -->|AuthorityAPI NetworkAuthorityClient| ValidatorClientStub
   ValidatorClientStub -->|network| RemoteValidator
   AS -->|reads/writes & sign effects| VS
   EPOCH -->|signature verifier, protocol_config| VS
