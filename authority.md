@@ -427,7 +427,7 @@ flowchart TB
   subgraph Network
     Client[Client / Node Caller]
     ValidatorServer[Validator gRPC Server]
-    ValidatorClientStub[ValidatorClient (gRPC stub) - remote]
+    ValidatorClientStub[ValidatorClient - remote]
   end
 
   subgraph ValidatorNode
