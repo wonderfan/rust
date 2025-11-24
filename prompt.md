@@ -1,3 +1,9 @@
+---
+
+As we all know, there are node configuration and protocol configuration in the blockchain system. How do popular blockchain systems manage these two aspects? Please explore their details.
+
+---
+
 Please read their codes carefully and line by line, ignore test related functions and code fragments. write concrete descriptions including following sections:
 
 1. main structs: 
