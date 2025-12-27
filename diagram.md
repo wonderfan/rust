@@ -160,3 +160,47 @@ sequenceDiagram
 
     Note over Reader, Books: 🔄 循环：通过阅读反哺 AI 沟通效率
 ```
+
+
+```mermaid
+
+sequenceDiagram
+    %% Global Styles
+    autonumber
+    
+    %% Participant Definitions with styling
+    participant 我 as <br><b><font size=4>我（调度器）</font></b>
+    participant 编码AI as <br><b><font size=4>编码AI代理</font></b>
+    participant 研究AI as <br><b><font size=4>研究AI代理</font></b>
+
+    %% Custom Colors for Roles
+    rect rgb(240, 248, 255)
+    loop 工作周期
+        我->>编码AI: 撰写技术规格并输入
+        Note right of 编码AI: <font color=navy>AI开始并行处理功能编码</font>
+        
+        我->>研究AI: 撰写新想法或思考并输入
+        Note right of 研究AI: <font color=darkgreen>AI开始并行研究思考</font>
+        
+        par AI并行工作与我并发切换
+            rect rgb(230, 245, 230)
+            编码AI-->>编码AI: 执行编码与产品功能
+            end
+            rect rgb(230, 245, 230)
+            研究AI-->>研究AI: 进行AI辅助研究
+            end
+        and
+            rect rgb(255, 250, 240)
+            我-->>我: 切换到阅读纸质书籍（哲学、数学、文学）
+            Note left of 我: <font color=brown>提升表达力，提高与AI沟通效率</font>
+            end
+        end
+        
+        编码AI->>我: 返回结果
+        研究AI->>我: 返回结果
+        
+        我->>我: 审查结果，进入下一周期
+        Note over 我: <br><b><font size=3>并发风格：时间分片；AI并行：独立处理</font></b>
+    end
+    end
+```
