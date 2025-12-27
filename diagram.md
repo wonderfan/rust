@@ -114,3 +114,49 @@ sequenceDiagram
     
     Note over Me, Think: ✨ <b>单核 CPU 并发风格：时间分片 | AI 代理并行：独立处理</b>
 ```
+
+```mermaid
+
+sequenceDiagram
+    autonumber
+    participant Reader as 🧠 我 (单核 CPU / 调度器)
+    participant Coder as 🤖 编码代理 (Product Shipping)
+    participant Researcher as 🎨 研究代理 (High-level Thoughts)
+    participant Books as 📚 纸质书 (哲学/数学/文学)
+
+    Note over Reader: 2025 并发工作流开始
+
+    rect rgb(230, 245, 255)
+        Reader->>Coder: [任务 A] 输入技术规格 (Context Injection)
+        activate Coder
+        Note right of Coder: 🟢 正在并行并行构建功能...
+    end
+
+    rect rgb(245, 230, 255)
+        Reader->>Researcher: [任务 B] 投喂灵感/研究课题 (Prompting)
+        activate Researcher
+        Note right of Researcher: 🟢 正在并行进行深度推理...
+    end
+
+    Note over Reader: ⚡ 时间片切换 (Context Switch)
+
+    rect rgb(255, 248, 220)
+        Reader->>Books: [并发任务 C] 沉浸式阅读 (哲学与数学)
+        activate Books
+        Note left of Books: 📖 提升表达力与逻辑深度
+        Books-->>Reader: 获得洞察与审美反馈
+        deactivate Books
+    end
+
+    Note over Reader: ⌛ 监听代理状态 (Wait for Callback)
+
+    Coder-->>Reader: [任务 A] 产出结果 / 等待 Review
+    deactivate Coder
+    Reader->>Reader: 评审与决策 (Next Cycle)
+
+    Researcher-->>Reader: [任务 B] 研究简报 / 洞察产出
+    deactivate Researcher
+    Reader->>Reader: 思想迭代
+
+    Note over Reader, Books: 🔄 循环：通过阅读反哺 AI 沟通效率
+```
