@@ -4,3 +4,4 @@
 - [Aweseome ZK](https://github.com/ventali/awesome-zk)
 - [Awesome ZKVM](https://github.com/rkdud007/awesome-zkvm)
 - [verified zkvm](https://github.com/Verified-zkEVM)
+- [Awesome ZKP](https://github.com/sCrypt-Inc/awesome-zero-knowledge-proofs)
